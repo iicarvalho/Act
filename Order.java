@@ -30,7 +30,6 @@ public class Order
 					this.orders.add(Integer.parseInt(orderString.substring(0,idx)));
 				//replace the order string
 				orderString = orderString.substring(idx+1,orderString.length());
-
 			}
 			
 			catch(Exception ex)
@@ -205,7 +204,7 @@ public class Order
 			return true;
 		}
 
-		//nigth
+		//night
 		else
 		{	
 			//walks the arraylist
@@ -293,7 +292,6 @@ public class Order
 				else
 					order = order.concat("error");
 			}
-
 			//show order
 			System.out.println(order);
 
@@ -310,17 +308,20 @@ public class Order
         // calculate pivot number, I am taking pivot as middle index number
         int pivot = this.orders.get(begin+(end-begin)/2);
         // Divide into two arrays
-        while (i <= j) {
+        while (i <= j)
+        {
             /**
              * In each iteration, we will identify a number from left side which 
              * is greater then the pivot value, and also we will identify a number 
              * from right side which is less then the pivot value. Once the search 
              * is done, then we exchange both numbers.
              */
+
             while (this.orders.get(i) < pivot)
                 i++;
             while (this.orders.get(j) > pivot)
                 j--;
+
             if (i <= j)
             {
                 swap(i, j);
