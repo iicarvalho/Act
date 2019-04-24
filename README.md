@@ -5,7 +5,7 @@
 * Para executar, digite "java ActTest". O terminal irá aguardar um input e será mostrado o resultado (ou erro) no final.
 * Caso a compilação não funcione, é provável que a JDK não esteja instalada em sua máquina. Para instalar utilize o comando "sudo apt-get install default-jdk" e tente novamente.
 
-# Tutorial de execução (via terminal - windows)
+# Tutorial de execução do teste (via terminal - windows)
 
 * Baixe a pasta "dist"
 * Coloque-a em um diretório de sua preferência
