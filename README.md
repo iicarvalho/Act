@@ -16,4 +16,4 @@
 **Dificuldades encontradas:**
 
 * Por se tratar de uma linguagem tipada, a manipulação de strings é mais complexa, porém o desenvolvimento não foi comprometido.
-* O último caso de testes ficou ambíguo na minha concepção. Não foi informado como deveria ser de fato o tratamento para itens que não podem ser repetidos. Optei por exibir ao usuário uma mensagem padronizada. No caso onde o período é o da manhã, o programa informa "pedidos múltiplos só são possíveis para bebidas". No caso onde o período é o da noite, o programa informa "pedidos múltiplos só são possíveis para batatas".
+* O último caso de testes ficou ambíguo na minha concepção. Não foi informado como deveria ser de fato o tratamento para itens que não podem ser repetidos. Optei por exibir ao usuário uma mensagem padronizada. No caso onde o período é o da manhã, o programa informa "pedidos múltiplos só são possíveis para bebidas". No caso onde o período é o da noite, o programa informa "pedidos múltiplos só são possíveis para acompanhamentos".
