@@ -24,7 +24,7 @@ public class Order
 			{
 				//catch the period
 				if (i==0)
-					this.timeOfDay = orderString.substring(0,idx);
+					this.timeOfDay = orderString.substring(0,idx).toLowerCase();
 				//catch items order	
 				else
 					this.orders.add(Integer.parseInt(orderString.substring(0,idx)));
