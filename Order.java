@@ -86,14 +86,12 @@ public class Order
 			{
 				case "morning":		
 					//call the method which verify if is a valid order
-					if(!verifyOrder())
-						System.out.println("multiple order is possible only for drinks");					
+					System.out.println(verifyOrder());					
 				break;
 
 				case "night":
 					//call the method which verify if is a valid order
-					if(!verifyOrder())
-						System.out.println("multiple order is possible only for sides");	
+					System.out.println(verifyOrder());	
 				break;
 				//non valid period
 				default:
@@ -111,7 +109,7 @@ public class Order
 	/**************************** private methods - accessible only for this class *****************/
 	
 	//verify if is a valid order
-	private boolean verifyOrder ()
+	private String verifyOrder ()
 	{
 		//final order
 		String order="";
@@ -141,15 +139,19 @@ public class Order
 
 				else if (this.orders.get(i) >3 || this.orders.get(i) <1)
 					dessert++;
-
-				//verify if the order is possible
-				if (entree>1 || side>1 || dessert>1)
-					return false;
 			}
 
 			//verify if exists a entree
 			if(entree>0)
+			{
 				order = order.concat("eggs");
+				if (entree >1)
+				{
+					order = order.concat(", error");
+					return order;
+				}
+
+			}
 
 			//verify if exists a side
 			if(side>0)
@@ -157,9 +159,16 @@ public class Order
 				//if have a entree 
 				if (!order.equals(""))
 					order = order.concat(", toast");
+
 				//if doesn't have a entree
 				else
-					order = order.concat("toast");		
+					order = order.concat("toast");	
+
+				if (side >1)
+				{
+					order = order.concat(", error");	
+					return order;
+				}
 			}
 
 			//verify if exists a drink
@@ -196,12 +205,16 @@ public class Order
 				//if doesn't have a entree,side or drink
 				else
 					order = order.concat("error");
+
+				if (dessert >1)
+				{
+					order = order.concat(", error");	
+					return order;
+				}
 			}
 
 			//show order
-			System.out.println(order);
-
-			return true;
+			return order;
 		}
 
 		//night
@@ -225,15 +238,19 @@ public class Order
 
 				else if (this.orders.get(i) > 4 || this.orders.get(i) < 1)
 					other++;
-
-				//verify if the order is possible 
-				if (entree>1 || drink>1 || dessert>1 || other>1)
-					return false;
 			}
 			
 			//verify if exists a entree
 			if(entree>0)
+			{
 				order = order.concat("steak");
+
+				if (entree >1)
+				{
+					order = order.concat(", error");	
+					return order;
+				}
+			}
 
 			//verify if exists a side
 			if(side>0)
@@ -268,7 +285,13 @@ public class Order
 					order = order.concat(", wine");
 				//if doesn't have a entree or side
 				else
-					order = order.concat("wine");		
+					order = order.concat("wine");	
+
+				if (drink >1)
+				{
+					order = order.concat(", error");	
+					return order;
+				}	
 			}
 
 			//verify if exists a dessert
@@ -280,6 +303,12 @@ public class Order
 				//if doesn't have a entree, side or drink
 				else
 					order = order.concat("cake");
+				
+				if (dessert >1)
+				{
+					order = order.concat(", error");	
+					return order;
+				}	
 			}
 
 			//verify if exists other order
@@ -293,9 +322,7 @@ public class Order
 					order = order.concat("error");
 			}
 			//show order
-			System.out.println(order);
-
-			return true;
+			return order;
 		}
 	}
 
