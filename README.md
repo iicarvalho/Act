@@ -11,6 +11,8 @@
 * Coloque-a em um diretório de sua preferência
 * Abra o prompt de comandos (CMD) e digite 'java -jar "C:\Diretorio\dist\ActTest.jar" ', onde a palavra 'Diretorio' no caminho especificado, é o diretório onde a pasta foi salva. O terminal irá aguardar um input e será mostrado o resultado (ou erro) no final.
 
+# Sobre o teste
+
 **Dificuldades encontradas:**
 
 * Por se tratar de uma linguagem tipada, a manipulação de strings é mais complexa, porém o desenvolvimento não foi comprometido.
