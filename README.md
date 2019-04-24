@@ -7,6 +7,6 @@
 
 # Tutorial de execução (via terminal - windows)
 
-* Baixe a pasta dist
+* Baixe a pasta "dist"
 * Coloque-a em um diretório de sua preferência
 * Abra o terminal e digite ' java -jar "C:\Diretorio\dist\ActTest.jar" ', onde a palavra 'Diretorio' no caminho especificado, é o diretório onde foi salva a pasta. O terminal irá aguardar um input e será mostrado o resultado (ou erro) no final.
