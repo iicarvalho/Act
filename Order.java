@@ -93,7 +93,7 @@ public class Order
 				case "night":
 					//call the method which verify if is a valid order
 					if(!verifyOrder())
-						System.out.println("multiple order is possible only for potatoes");	
+						System.out.println("multiple order is possible only for sides");	
 				break;
 				//non valid period
 				default:
