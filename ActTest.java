@@ -1,9 +1,5 @@
 // Developed by: Igor Inácio de Carvalho Silva
 
-//To compile the project : javac projectName
-//To execute the project: java projectName
-//Example of a valid input: morning, 1, 2, 3, 4
-
 //imports
 import java.util.Scanner; // Scanner
 
